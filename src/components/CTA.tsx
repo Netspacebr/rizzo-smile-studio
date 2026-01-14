@@ -1,11 +1,11 @@
-import { Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { Phone, MessageCircle, ArrowRight, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CTA = () => {
   const whatsappLink = "https://wa.me/5511973825236?text=Gostaria%20de%20agendar%20uma%20consulta";
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-gold relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-primary relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-primary-foreground/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-foreground/5 rounded-full translate-x-1/3 translate-y-1/3" />
@@ -14,9 +14,9 @@ const CTA = () => {
         <div className="text-center max-w-3xl mx-auto">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/20 backdrop-blur-sm mb-6">
-            <MessageCircle className="w-4 h-4 text-primary-foreground" />
+            <Shield className="w-4 h-4 text-primary-foreground" />
             <span className="text-sm font-medium text-primary-foreground">
-              Atendimento humanizado
+              Ambiente seguro e higienizado
             </span>
           </div>
 

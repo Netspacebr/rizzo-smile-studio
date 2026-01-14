@@ -18,6 +18,7 @@ const Header = () => {
   const navItems = [
     { label: "Início", href: "#inicio" },
     { label: "Serviços", href: "#servicos" },
+    { label: "Resultados", href: "#resultados" },
     { label: "Sobre", href: "#sobre" },
     { label: "Depoimentos", href: "#depoimentos" },
     { label: "Contato", href: "#contato" },
@@ -44,7 +45,7 @@ const Header = () => {
             />
             <div className="hidden sm:block">
               <span className="font-serif text-xl font-semibold text-foreground">
-                Clínica <span className="text-gradient-gold">Rizzo</span>
+                Clínica <span className="text-gradient-primary">Rizzo</span>
               </span>
               <p className="text-xs text-muted-foreground -mt-0.5">Odontologia</p>
             </div>
@@ -86,7 +87,7 @@ const Header = () => {
         {/* Mobile Menu */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-500 ${
-            isMobileMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
+            isMobileMenuOpen ? "max-h-[500px] opacity-100 mt-4" : "max-h-0 opacity-0"
           }`}
         >
           <nav className="flex flex-col gap-4 py-4 border-t border-border">

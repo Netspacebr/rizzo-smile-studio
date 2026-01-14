@@ -61,7 +61,7 @@ const Services = () => {
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
             Cuidado completo para o seu{" "}
-            <span className="text-gradient-gold">sorriso</span>
+            <span className="text-gradient-primary">sorriso</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Oferecemos tratamentos personalizados com as técnicas mais modernas 
@@ -83,7 +83,7 @@ const Services = () => {
               </span>
 
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <service.icon className="w-7 h-7 text-primary-foreground" />
               </div>
 

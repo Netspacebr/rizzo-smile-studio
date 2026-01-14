@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Star } from "lucide-react";
+import { Phone, MapPin, Star, Shield, Heart } from "lucide-react";
 import heroImage from "@/assets/hero-dental-clinic.jpg";
 
 const Hero = () => {
@@ -14,7 +14,7 @@ const Hero = () => {
           alt="Clínica Rizzo - Ambiente acolhedor"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/90 to-background/50" />
       </div>
 
       {/* Content */}
@@ -23,17 +23,17 @@ const Hero = () => {
           <div className="max-w-2xl animate-fade-in-up">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/80 backdrop-blur-sm mb-6">
-              <Star className="w-4 h-4 text-primary fill-primary" />
+              <Shield className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-accent-foreground">
-                Cuidado em todas as fases da vida
+                Higiene e segurança em primeiro lugar
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground leading-tight mb-6">
               Seu sorriso merece{" "}
-              <span className="text-gradient-gold">confiança</span> e{" "}
-              <span className="text-gradient-gold">carinho</span>
+              <span className="text-gradient-primary">cuidado</span> e{" "}
+              <span className="text-gradient-primary">confiança</span>
             </h1>
 
             {/* Subheadline */}
@@ -43,6 +43,22 @@ const Hero = () => {
               <span className="text-foreground font-medium"> Aqui, seu medo é acolhido.</span>
             </p>
 
+            {/* Trust indicators */}
+            <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                  <Shield className="w-4 h-4 text-primary" />
+                </div>
+                <span>Protocolos rigorosos</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                  <Heart className="w-4 h-4 text-primary" />
+                </div>
+                <span>Atendimento humanizado</span>
+              </div>
+            </div>
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -51,9 +67,9 @@ const Hero = () => {
                   Agendar Consulta
                 </Button>
               </a>
-              <a href="#servicos">
+              <a href="#resultados">
                 <Button variant="gold-outline" size="xl" className="w-full sm:w-auto">
-                  Conheça Nossos Serviços
+                  Ver Resultados
                 </Button>
               </a>
             </div>
@@ -70,7 +86,7 @@ const Hero = () => {
           {/* Right side - Floating elements */}
           <div className="hidden lg:flex justify-center items-center relative">
             <div className="absolute top-10 right-10 animate-float">
-              <div className="bg-card/90 backdrop-blur-md rounded-2xl p-6 shadow-elevated">
+              <div className="bg-card/90 backdrop-blur-md rounded-2xl p-6 shadow-elevated border border-border/50">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="flex">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -84,8 +100,8 @@ const Hero = () => {
             </div>
 
             <div className="absolute bottom-20 left-0 animate-float" style={{ animationDelay: "1s" }}>
-              <div className="bg-card/90 backdrop-blur-md rounded-2xl p-6 shadow-elevated">
-                <p className="text-2xl font-serif font-bold text-gradient-gold mb-1">10+</p>
+              <div className="bg-card/90 backdrop-blur-md rounded-2xl p-6 shadow-elevated border border-border/50">
+                <p className="text-2xl font-serif font-bold text-gradient-primary mb-1">10+</p>
                 <p className="text-sm text-muted-foreground">Anos de experiência</p>
               </div>
             </div>

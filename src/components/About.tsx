@@ -1,12 +1,12 @@
-import { Award, Users, Clock, Heart } from "lucide-react";
+import { Award, Users, Clock, Heart, Shield, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import dentistImage from "@/assets/dentist-portrait.jpg";
 
-const stats = [
-  { icon: Users, value: "2.000+", label: "Pacientes Atendidos" },
-  { icon: Award, value: "10+", label: "Anos de Experiência" },
-  { icon: Clock, value: "98%", label: "Satisfação" },
-  { icon: Heart, value: "100%", label: "Dedicação" },
+const highlights = [
+  "Ambiente 100% esterilizado",
+  "Equipamentos de última geração",
+  "Atendimento humanizado",
+  "Profissionais especializados",
 ];
 
 const About = () => {
@@ -31,8 +31,11 @@ const About = () => {
             <div className="absolute top-10 -left-10 w-24 h-24 rounded-full bg-accent -z-0 hidden lg:block" />
             
             {/* Floating stat card */}
-            <div className="absolute -bottom-4 -right-4 lg:bottom-10 lg:-right-10 bg-card rounded-2xl p-5 shadow-elevated z-20">
-              <p className="font-serif text-3xl font-bold text-gradient-gold">CROSP</p>
+            <div className="absolute -bottom-4 -right-4 lg:bottom-10 lg:-right-10 bg-card rounded-2xl p-5 shadow-elevated z-20 border border-border/50">
+              <div className="flex items-center gap-2 mb-1">
+                <Shield className="w-5 h-5 text-primary" />
+                <span className="font-serif text-xl font-bold text-gradient-primary">CROSP</span>
+              </div>
               <p className="text-sm text-muted-foreground">149453</p>
             </div>
           </div>
@@ -44,7 +47,7 @@ const About = () => {
             </span>
             
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
-              Cuidamos de <span className="text-gradient-gold">sorrisos</span> em todas as fases da vida
+              Cuidamos de <span className="text-gradient-primary">sorrisos</span> em todas as fases da vida
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -55,22 +58,36 @@ const About = () => {
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Nossa missão é proporcionar saúde bucal com tecnologia de ponta e um 
-              atendimento humanizado que faz você se sentir em casa. Atendemos 
-              crianças, adultos e idosos, sempre com muito carinho e profissionalismo.
+              Nossa clínica segue os mais rigorosos protocolos de higiene e biossegurança, 
+              garantindo um ambiente seguro e acolhedor para você e sua família.
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center lg:text-left">
-                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-accent mb-2">
-                    <stat.icon className="w-5 h-5 text-primary" />
+            {/* Highlights */}
+            <div className="grid sm:grid-cols-2 gap-3 mb-10">
+              {highlights.map((item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <CheckCircle className="w-4 h-4 text-primary" />
                   </div>
-                  <p className="font-serif text-2xl font-bold text-foreground">{stat.value}</p>
-                  <p className="text-xs text-muted-foreground">{stat.label}</p>
+                  <span className="text-foreground text-sm font-medium">{item}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 mb-10 p-6 rounded-2xl bg-secondary/50">
+              <div className="text-center">
+                <p className="font-serif text-2xl lg:text-3xl font-bold text-gradient-primary">2.000+</p>
+                <p className="text-xs text-muted-foreground mt-1">Pacientes</p>
+              </div>
+              <div className="text-center border-x border-border">
+                <p className="font-serif text-2xl lg:text-3xl font-bold text-gradient-primary">10+</p>
+                <p className="text-xs text-muted-foreground mt-1">Anos</p>
+              </div>
+              <div className="text-center">
+                <p className="font-serif text-2xl lg:text-3xl font-bold text-gradient-primary">98%</p>
+                <p className="text-xs text-muted-foreground mt-1">Satisfação</p>
+              </div>
             </div>
 
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
