@@ -12,7 +12,7 @@ const testimonials = [
   {
     name: "Carlos Eduardo",
     role: "Clareamento dental",
-    content: "O resultado do meu clareamento superou todas as expectativas. A equipe é muito atenciosa e o ambiente é acolhedor. Recomendo de olhos fechados!",
+    content: "O resultado do meu clareamento superou todas as expectativas. A equipe é muito atenciosa e o ambiente é super limpo e organizado. Recomendo!",
     rating: 5,
     image: null,
   },
@@ -36,7 +36,7 @@ const Testimonials = () => {
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
             O que nossos pacientes{" "}
-            <span className="text-gradient-gold">dizem</span>
+            <span className="text-gradient-primary">dizem</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Cada sorriso transformado é uma história de confiança e cuidado. 
@@ -78,7 +78,7 @@ const Testimonials = () => {
                     className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
                   />
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-gradient-gold flex items-center justify-center text-primary-foreground font-semibold">
+                  <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-primary-foreground font-semibold">
                     {testimonial.name.charAt(0)}
                   </div>
                 )}
